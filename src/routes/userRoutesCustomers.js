@@ -8,7 +8,16 @@ const getUserProfile = async () => {
     throw error;
   }
 };
+const postUserProfile = async () => {
+  try {
+    const response = await asaasService.post('/customers');
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
 
 module.exports = {
   getUserProfile,
+  postUserProfile
 };

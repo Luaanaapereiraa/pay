@@ -1,7 +1,7 @@
 console.log('Executando userController...');
-const { getUserProfile } = require('../routes/userRoutes');
+const { getUserProfile } = require('../routes/userRoutesCustomers');
 
-const executeController = async () => {
+const executeControllerList = async () => {
   try {
     const userProfile = await getUserProfile();
     console.log('Resultado:', userProfile);
@@ -10,4 +10,4 @@ const executeController = async () => {
   }
 };
 
-executeController();
+executeControllerList();
