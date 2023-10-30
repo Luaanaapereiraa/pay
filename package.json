@@ -1,0 +1,13 @@
+{
+  "name": "pay",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Luaanaapereiraa/pay.git",
+  "author": "luaanaaperiraa <luanapdsantos@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "dotenv": "^16.3.1",
+    "node-fetch": "2"
+  }
+}
