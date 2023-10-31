@@ -1,19 +1,21 @@
 console.log('Executando userController...');
-const { postUserProfile } = require('../routes/userRoutesCustomers');
+const { postPayment } = require('../routes/useRoutesPayments');
 
 
 const executeControllerNew = async () => {
   try {
-    const userProfile = await postUserProfile();
+    const payment = await postPayment();
 
-    console.log('Resultado:', userProfile);
+    console.log('Resultado:', payment);
   } catch (error) {
     if (error.response && error.response.data && error.response.data.errors) {
       console.error('Erros:', error.response.data.errors);
     } else {
       console.error('Erro:', error);
+
     }
   }
 };
 
 executeControllerNew();
+

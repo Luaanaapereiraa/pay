@@ -8,9 +8,15 @@ const getUserProfile = async () => {
     throw error;
   }
 };
+
+const newUser = {
+  name: 'Novo Usuário',
+  cpfCnpj: ''
+};
+
 const postUserProfile = async () => {
   try {
-    const response = await asaasService.post('/customers');
+    const response = await asaasService.post('/customers', newUser );
     return response.data;
   } catch (error) {
     throw error;
