@@ -31,7 +31,17 @@ const postUserProfile = async (newUser: NewUser): Promise<UserProfile> => {
   }
 };
 
+const putUserProfile = async (id: string, updatedUser: NewUser): Promise<UserProfile> => {
+  try {
+    const response = await asaasService.put(`/customers/${id}`, updatedUser);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
+
 export {
   getUserProfile,
-  postUserProfile
+  postUserProfile,
+  putUserProfile
 };

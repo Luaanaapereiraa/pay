@@ -1,5 +1,5 @@
 import axios, { AxiosInstance } from 'axios';
-
+import 'dotenv/config'
 
 
 const BASE_URL = 'https://sandbox.asaas.com/api/v3';
