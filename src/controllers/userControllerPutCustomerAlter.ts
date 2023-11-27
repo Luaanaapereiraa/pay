@@ -1,3 +1,4 @@
+// Seu script principal
 import { putUserProfile } from '../routes/userRoutesCustomers';
 
 interface NewUser {
@@ -6,11 +7,11 @@ interface NewUser {
 }
 
 const updatedUser: NewUser = {
-  name: 'TesteAlteracao', 
-  cpfCnpj: '12312312311', 
+  name: 'TesteAlteracao',
+  cpfCnpj: '12312312311',
 };
 
-const userId = 'cus_000005765029'; 
+const userId = 'cus_000005765029';
 
 const executeControllerUpdate = async (): Promise<void> => {
   try {
