@@ -30,6 +30,7 @@ dist/
 
 # Dependency directory
 node_modules
+node_modules/typescript/
 bower_components
 
 # Editors
