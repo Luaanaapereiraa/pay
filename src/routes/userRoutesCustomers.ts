@@ -36,13 +36,13 @@ export const postUserProfile = async (newUser: NewUser): Promise<any> => {
   }
 };
 
-export const putUserProfile = async (req: Request, res: Response): Promise<void> => {
+export const putUserProfile = async (userId: string, req: Request, res: Response): Promise<void> => {
   try {
-    const { id } = req.params;
     const updatedUser: NewUser = req.body;
-    const response = await asaasService.put(`/customers/${id}`, updatedUser);
+    const response = await asaasService.put(`/customers/${userId}`, updatedUser);
     res.json(response.data);
   } catch (error) {
+    console.error(error);
     res.status(500).json({ error: 'Erro na requisição' });
   }
 };

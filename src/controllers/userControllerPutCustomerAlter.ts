@@ -1,4 +1,4 @@
-// Seu script principal
+import { Request, Response } from 'express';
 import { putUserProfile } from '../routes/userRoutesCustomers';
 
 interface NewUser {
@@ -12,16 +12,19 @@ const updatedUser: NewUser = {
 };
 
 const userId = 'cus_000005765029';
+const req = {} as Request; 
+const res = {} as Response;
 
 const executeControllerUpdate = async (): Promise<void> => {
   try {
-    const alterUser = await putUserProfile(userId, updatedUser);
-
-    console.log('Usuário Atualizado:', alterUser);
+     await putUserProfile(userId, req, res);
+ 
+     console.log('Usuário Atualizado');
   } catch (error) {
-    console.log('Tipo do Erro:', typeof error);
-    console.error('Erro:', error);
+     console.log('Tipo do Erro:', typeof error);
+     console.error('Erro:', error);
   }
-};
+ };
+ 
 
 executeControllerUpdate();
