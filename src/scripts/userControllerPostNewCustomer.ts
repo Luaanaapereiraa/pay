@@ -9,7 +9,7 @@ interface NewUser {
 
 const newUser: NewUser = {
   name: 'User Name Test 2', 
-  cpfCnpj: '403.643.468-33', 
+  cpfCnpj: '000.000.000-00', 
 };
 
 const executeControllerNew = async (): Promise<void> => {
