@@ -1,4 +1,4 @@
-import { postPayment } from '../routes/useRoutesPayments';
+import { postPayment } from '../controllers/paymentController';
 
 interface PaymentDetails {
   // Defina os campos específicos do pagamento aqui
@@ -6,12 +6,13 @@ interface PaymentDetails {
 }
 
 const body = {
-  customer: "cus_000005765029",
+  customer: "cus_000005798964",
   billingType: "BOLETO",
-  value: 2000.00,
-  dueDate: "2023-11-21",
+  value: 3010.00,
+  dueDate: "2023-12-01",
+  totalValue: 3010.00,
   installmentCount: 10,
-  installmentValue: 200.00
+  installmentValue: 301.00
 };
 
 const executeControllerNew = async (): Promise<void> => {

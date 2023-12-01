@@ -1,4 +1,6 @@
-import { postUserProfile } from '../routes/userRoutesCustomers';
+import app from '../app';
+import http from 'http';
+import { postUserProfile } from '../controllers/customerController';
 
 interface NewUser {
   name: string;
@@ -6,8 +8,8 @@ interface NewUser {
 }
 
 const newUser: NewUser = {
-  name: 'Teste', 
-  cpfCnpj: '12312312311', 
+  name: 'User Name Test 2', 
+  cpfCnpj: '403.643.468-33', 
 };
 
 const executeControllerNew = async (): Promise<void> => {
@@ -18,8 +20,21 @@ const executeControllerNew = async (): Promise<void> => {
   } catch (error) {
     console.log('Tipo do Erro:', typeof error);
     console.error('Erro:', error);
+  } finally {
+    
+    server.close(() => {
+      console.log('Servidor encerrado');
+    });
   }
 };
+
+const server = http.createServer(app);
+
+server.listen(3001, async () => {
+  await executeControllerNew();
+});
+
+
 
 
 
