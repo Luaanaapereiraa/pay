@@ -9,9 +9,9 @@ const asaasService: AxiosInstance = axios.create({
   headers: {
     'accept': 'application/json',
     'content-type': 'application/json',
-    'access_token': process.env.ASAAS_API_KEY || ''
+    'access_token': '$aact_YTU5YTE0M2M2N2I4MTliNzk0YTI5N2U5MzdjNWZmNDQ6OjAwMDAwMDAwMDAwMDAwNjgyODE6OiRhYWNoXzk0MzdjZDNhLTQ2MjYtNDUwZS1iNjIzLTU1Y2MzMmQ3OTkzNg=='|| ''
   },
 });
-console.log("Senha", process.env.ASAAS_API_KEY);
+
 
 export default asaasService;
